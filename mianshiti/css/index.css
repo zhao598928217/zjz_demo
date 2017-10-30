@@ -1,0 +1,33 @@
+body,
+div,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #D0D8DE;
+}
+
+.container {
+    background-color: #E8A541;
+    width: 800px;
+    height: 400px;
+    position: relative;
+    margin: 100px auto;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.blueBall {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    z-index: 1;
+    transition: top 1s, left 1s;
+}
+
+.redBall {
+    position: absolute;
+    z-index: 2;
+}
