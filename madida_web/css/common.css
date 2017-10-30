@@ -1,0 +1,72 @@
+/*css初始化*/
+body, ul, li, div, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, a, input, ol {
+  margin: 0;
+  padding: 0;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+body {
+  font-family: "microsoft yahei";
+  background-color: #000;
+}
+
+em, i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+a:hover {
+  color: #f10215;
+}
+
+input, button {
+  border: 0 none;
+  outline-style: none; /*清除轮廓线*/
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.pa {
+  position: absolute;
+}
+
+.pr {
+  position: relative;
+}
+
+.clearfix:after {
+  display: block;
+  content: ".";
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.w {
+  width: 1349px;
+  margin: 0 auto; /*只能让标准流下的块元素水平居中*/
+}
