@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #box {
+      width: 800px;
+      height: 600px;
+      border: 1px solid aqua;
+      margin: 100px auto;
+    }
+
+    li {
+      list-style: none;
+      float: left;
+      width: 16.66666%;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      background-color: yellow;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    li.current {
+      background-color: chartreuse;
+    }
+
+    #bd div {
+      width: 100%;
+      height: 600px;
+      background-color: chartreuse;
+      text-align: center;
+      display: none;
+      font: 900 60px/500px "微软雅黑";
+    }
+
+    #bd .current {
+      display: block;
+    }
+
+    img {
+      width: 600px;
+      height: 450px;
+      margin: 20px auto;
+
+    }
+
+  </style>
+</head>
+<body>
+<div id="box">
+  <ul id="now">
+    <li class="current">导航1</li>
+    <li>导航2</li>
+    <li>导航3</li>
+    <li>导航4</li>
+    <li>导航5</li>
+    <li>导航6</li>
+  </ul>
+  <div id="bd">
+    <div class="current"><img src="images/1.jpg" alt=""></div>
+    <div><img src="images/2.jpg" alt=""></div>
+    <div><img src="images/3.jpg" alt=""></div>
+    <div><img src="images/4.jpg" alt=""></div>
+    <div><img src="images/5.jpg" alt=""></div>
+    <div><img src="images/6.jpg" alt=""></div>
+  </div>
+</div>
+<script>
+  var now = document.getElementById("now");
+
+  var lis = now.getElementsByTagName("li");
+
+  var bd = document.getElementById("bd");
+
+  var divs = bd.getElementsByTagName("div");
+
+  for (var i = 0; i < lis.length; i++) {
+    lis[i].index = i;
+    lis[i].onclick = function () {
+      for (var i = 0; i < lis.length; i++) {
+        lis[i].className = "";
+        divs[i].className = ""
+      }
+      this.className = "current";
+      divs[this.index].className = "current";
+    }
+
+  }
+
+
+</script>
+</body>
+</html>
