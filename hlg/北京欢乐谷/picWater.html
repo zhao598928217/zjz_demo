@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: relative;
+    }
+    body{
+      background-color: #ccc;}
+    
+    .item {
+      /*border: 1px solid deepskyblue;*/
+      padding: 10px;
+      float: left;
+      width:252px;
+      position: absolute;
+      overflow: hidden;
+    }
+    
+    .item img {
+      display: block;
+      /*width: 192px;*/
+      width:252px;
+      transition: all 1s;
+    }
+    .item img:hover{
+      /*position:absolute ;*/
+      width: 280px;
+      /*height: 100%;*/
+      /*z-index: 9;*/
+      transform: rotateY(180deg);
+    }
+  
+  </style>
+</head>
+<body>
+<div id="box">
+  <div class="item"><img src="img/w01.jpg" alt=""></div>
+  <div class="item"><img src="img/w02.jpg" alt=""></div>
+  <div class="item"><img src="img/w03.jpg" alt=""></div>
+  <div class="item"><img src="img/w04.jpg" alt=""></div>
+  <div class="item"><img src="img/w05.jpg" alt=""></div>
+  <div class="item"><img src="img/w06.jpg" alt=""></div>
+  <div class="item"><img src="img/w07.jpg" alt=""></div>
+  <div class="item"><img src="img/w08.jpg" alt=""></div>
+  <div class="item"><img src="img/w09.jpg" alt=""></div>
+  <div class="item"><img src="img/w10.jpg" alt=""></div>
+  <div class="item"><img src="img/w11.jpg" alt=""></div>
+  <div class="item"><img src="img/w12.jpg" alt=""></div>
+  <div class="item"><img src="img/w13.jpg" alt=""></div>
+  <div class="item"><img src="img/w14.jpg" alt=""></div>
+  <div class="item"><img src="img/w15.jpg" alt=""></div>
+  <div class="item"><img src="img/w16.jpg" alt=""></div>
+  <div class="item"><img src="img/w17.jpg" alt=""></div>
+  <div class="item"><img src="img/w18.jpg" alt=""></div>
+  <div class="item"><img src="img/w19.jpg" alt=""></div>
+  <div class="item"><img src="img/w20.jpg" alt=""></div>
+  <div class="item"><img src="img/w21.jpg" alt=""></div>
+  <div class="item"><img src="img/w22.jpg" alt=""></div>
+  <div class="item"><img src="img/w23.jpg" alt=""></div>
+  <div class="item"><img src="img/w24.jpg" alt=""></div>
+  <div class="item"><img src="img/w25.jpg" alt=""></div>
+  <div class="item"><img src="img/w26.jpg" alt=""></div>
+  <div class="item"><img src="img/w27.jpg" alt=""></div>
+</div>
+
+<script>
+  window.onload = function () {
+    //1. 找对象
+    var box = document.getElementById("box");
+    var items = box.children;
+    var gap = 10;//每一列之间的缝隙
+    
+    
+    waterFall();
+    
+    
+    window.onresize = function () {
+      waterFall();
+    }
+    
+    
+    window.onscroll = function () {
+      //确定什么时候要加载图片,如果最后一张图片都出现了，说明后面就没有图片，就需要加载图片了。
+      //当页面的可视区高度 + scrollTop 超过 最后一张图片的offsetTop的时候，就要加载图片
+      if (getClient().height + getScrollTop() >= items[items.length - 1].offsetTop) {
+        console.log("需要加载图片了");
+        //需要在这里发送ajax请求，去后台拿数据
+        var datas = [
+          "img/w01.jpg",
+          "img/w02.jpg",
+          "img/w03.jpg",
+          "img/w04.jpg",
+          "img/w05.jpg",
+          "img/w06.jpg",
+          "img/w07.jpg",
+          "img/w08.jpg",
+          "img/w09.jpg",
+          "img/w10.jpg",
+          "img/w11.jpg",
+          "img/w12.jpg",
+          "img/w13.jpg",
+          "img/w14.jpg",
+          "img/w15.jpg",
+          "img/w16.jpg",
+          "img/w17.jpg",
+          "img/w18.jpg",
+          "img/w19.jpg",
+          "img/w20.jpg",
+          "img/w21.jpg",
+          "img/w22.jpg",
+          "img/w23.jpg",
+          "img/w24.jpg",
+          "img/w25.jpg",
+          "img/w26.jpg",
+          "img/w27.jpg",
+        ];
+        for (var i = 0; i < datas.length; i++) {
+          var div = document.createElement("div");
+          div.className = "item";
+          div.innerHTML = '<img src="' + datas[i] + '" alt="">';
+          box.appendChild(div);
+        }
+        waterFall();
+      }
+    };
+    
+    
+    function waterFall() {
+      //2. 确定多少列  页面的宽度  / li的宽度
+      var pageWidth = getClient().width;
+      var liWidth = items[0].offsetWidth;
+      var columns = parseInt(pageWidth / (liWidth + 10));
+      console.log(columns);
+      var arr = [];
+      for (var i = 0; i < items.length; i++) {
+        if (i < columns) {
+          //3. 搞定了第一行
+          items[i].style.top = 0;
+          items[i].style.left = (liWidth + gap) * i + "px";
+          arr.push(items[i].offsetHeight);
+          console.log(arr);
+        } else {
+          //其他行
+          //4. 找arr的最小值以及索引
+          var min = arr[0];
+          var index = 0;
+          for (var j = 0; j < arr.length; j++) {
+            if (min > arr[j]) {
+              min = arr[j];
+              index = j;
+            }
+          }
+          console.log(index + "  " + min);
+          //5. 把div设置到最小列
+          // div的top值就是最小列存的那个高度
+          items[i].style.top = arr[index] + "px";
+          // div的left值就是最小列的那个div的offsetLeft
+          items[i].style.left = items[index].offsetLeft + "px";
+          
+          //6. 修改数组的最小列的高度 因为加了一个div了
+          arr[index] = arr[index] + items[i].offsetHeight;
+        }
+      }
+    }
+    
+  }
+  
+  function getScrollTop() {
+    return window.pageYOffset || document.documentElement.scrollTop;
+  }
+  
+  function getClient() {
+    return {
+      width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || 0,
+      height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0
+    }
+  }
+
+</script>
+</body>
+</html>

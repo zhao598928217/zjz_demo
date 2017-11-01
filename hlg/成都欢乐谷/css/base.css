@@ -1,0 +1,1448 @@
+/*
+ * Author      :蔡应
+ * Date        :2014年2月18日14:42:36
+ * Description :成都欢乐谷网站样式重置和公用样式
+ */
+@charset "utf-8";
+
+/*RESET*/
+body, html, div, p, table, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, img {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, li, dl, dt, dd {
+  list-style: none;
+  font-family: Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+}
+
+img, a {
+  border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: normal 1em/22px "\5B8B\4F53";
+}
+
+a {
+  outline: none;
+  color: #848484;
+  text-decoration: none;
+}
+
+a:active {
+  star: expression(this.onFocus=this.blur());
+}
+
+a:hover {
+  color: red;
+}
+
+em {
+  font-style: normal;
+}
+
+input, textarea {
+  outline: none;
+}
+
+/*
+新细明体 \65B0\7EC6\660E\4F53 
+细明体 \7EC6\660E\4F53 
+标楷体 \6807\6977\4F53 
+黑体 \9ED1\4F53 
+宋体 \5B8B\4F53 
+新宋体 \65B0\5B8B\4F53 
+仿宋 \4EFF\5B8B 
+楷体 \6977\4F53 
+仿宋_GB2312 \4EFF\5B8B_GB2312 
+楷体_GB2312 \6977\4F53_GB2312 
+微软正黑体 \5FAE\x8F6F\6B63\9ED1\4F53 
+微软雅黑 \5FAE\8F6F\96C5\9ED1
+Verdana,\5FAE\8F6F\96C5\9ED1
+*/
+
+/*Base*/
+body {
+  font: normal 12px/22px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  color: #383838;
+}
+
+* body {
+  background-attachment: fixed;
+  background-image: url(about:blank);
+}
+
+.left {
+  float: left;
+  display: inline;
+}
+
+.right {
+  float: right;
+  display: inline;
+}
+
+.clear {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  clear: both;
+  overflow: hidden;
+}
+
+.wrap1002 {
+  position: relative;
+  margin: 0 auto;
+  width: 1002px;
+}
+
+.wrap1920 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  min-width: 1002px;
+}
+
+.red {
+  color: red;
+}
+
+/*页面头部*/
+/*#header { z-index:120; position:relative; width:100%; height:108px; background:url(/Images/repeatX01_01.jpg) no-repeat center top; min-width:1002px; }*//*万圣装饰*/
+#header {
+  z-index: 120;
+  position: relative;
+  width: 100%;
+  height: 109px;
+  background: url(/Images/repeatX01.jpg) repeat-x;
+  min-width: 1002px;
+}
+
+.headerBox {
+  height: 109px;
+  background: url(/Images/logo01.png) no-repeat left top;
+}
+
+/*.headerBox { height:109px; background:url(/Images/logo01.jpg) no-repeat left top;}*//* 备份春节后换回 */
+.headerBox h1 {
+  float: left;
+  padding-left: 92px;
+  padding-top: 24px;
+  width: 140px;
+  height: 70px;
+}
+
+.headerBox h1 a {
+  display: block;
+  width: 140px;
+  height: 70px;
+  background: url(about:blank);
+}
+
+.headerBox .navWrap {
+  float: right;
+  width: 690px;
+  height: 109px;
+}
+
+.navTop {
+  height: 44px;
+  color: #757575;
+  font: normal 12px/42px "宋体";
+}
+
+.navTop a {
+  color: #757575;
+}
+
+.navTop a:hover {
+  color: red;
+}
+
+.navTop .time {
+  float: left;
+  padding-left: 25px;
+  background: url(/Images/icon01.png) no-repeat 0px 11px;
+}
+
+.navTop .time .tImg {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin-top: 5px;
+}
+
+.navTop .login {
+  float: right;
+  padding-left: 25px;
+  background: url(/Images/icon01.png) no-repeat 0px -38px;
+}
+
+.navTop .weather {
+  float: left;
+  padding-left: 20px;
+  padding-top: 6px;
+  width: 170px;
+  height: 34px;
+}
+
+/*  开闭园时间表  */
+.navWrap .tBox {
+  width: 579px;
+  height: 264px;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 435px;
+  background: url(../Images/timeBg.png) no-repeat center top;
+  display: none;
+}
+
+.navWrap .tBox table td {
+  font: normal 14px/34px "微软雅黑";
+  color: #7b2591;
+}
+
+/*导航*/
+#nav {
+  height: 65px;
+}
+
+#nav li {
+  float: left;
+  height: 65px;
+  background: url(/Images/icon01.png) no-repeat 0px -116px;
+}
+
+#nav li a {
+  display: inline-block;
+  height: 65px;
+  padding: 0px 16px 0px 17px;
+  font: normal 14px/65px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+}
+
+#nav li a:hover, #nav li a.active {
+  background: url(/Images/icon05.png) no-repeat center bottom;
+}
+
+/*二级导航*/
+#subNavWrap {
+  z-index: 110;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  min-width: 1002px;
+  height: 49px;
+  background: url(/Images/icon01.png) repeat-x 0px -200px;
+}
+
+#subNav {
+  position: relative;
+  width: 100%;
+  height: 49px;
+}
+
+#subNav li {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 49px;
+  background: url(/Images/subNavLi_bg.png) no-repeat;
+}
+
+#subNav li.li1 {
+  left: 150px;
+  background-position: 100px 0px;
+}
+
+#subNav li.li2 {
+  left: 150px;
+  background-position: 195px 0px;
+}
+
+#subNav li.li3 {
+  left: 470px;
+  background-position: -10px 0px;
+}
+
+#subNav li.li4 {
+  left: 514px;
+  background-position: 50px 0px;
+}
+
+#subNav li.li5 {
+  left: 200px;
+  background-position: 462px 0px;
+}
+
+#subNav li.li6 {
+  left: 500px;
+  background-position: 260px 0px;
+}
+
+#subNav li.li7 {
+  left: 700px;
+  background-position: 160px 0px;
+}
+
+#subNav li.li8 {
+  left: 820px;
+  background-position: 50px 0px;
+}
+
+#subNav li a {
+  float: left;
+  color: #fff;
+  font: normal 12px/49px "宋体";
+  height: 49px;
+  padding: 0 18px;
+  background: url(/Images/icon01.png) no-repeat 0px -250px;
+}
+
+#subNav li a:hover {
+  color: #ec6735;
+}
+
+/*登陆、注册*/
+#shadowBg {
+  display: none;
+  position: fixed;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: url(/Images/shadow40.png) repeat;
+  _position: absolute;
+  _top: expression(eval(document.documentElement.scrollTop));
+  _height: expression(eval(document.documentElement.clientHeight)+"px");
+}
+
+#loginBox, #registerBox {
+  position: fixed;
+  z-index: 910;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -325px;
+  width: 360px;
+  padding: 20px;
+  padding-left: 260px;
+  background-color: #fff;
+  _position: absolute;
+  _top: expression(eval(document.documentElement.scrollTop)+100);
+  _margin-top: 0px;
+}
+
+#loginBox {
+  display: none;
+  background: #fff url(/Images/loginBg.jpg) no-repeat 20px 20px;
+}
+
+#registerBox {
+  display: none;
+  background: #fff url(/Images/registerBg.jpg) no-repeat 20px 20px;
+}
+
+#loginBox .closeBtn, #registerBox .closeBtn {
+  cursor: pointer;
+  position: absolute;
+  top: -35px;
+  right: 4px;
+  width: 35px;
+  height: 35px;
+  background: url(/Images/btn01.jpg) no-repeat -151px -44px;
+}
+
+#loginBox h4, #registerBox h4 {
+  height: 30px;
+  padding-left: 100px;
+  font: normal 16px/30px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  color: #484848;
+}
+
+#loginBox .loginInfo, #registerBox .loginInfo {
+  padding: 20px 0 60px 10px;
+  border-left: dashed 1px #c5c5c5;
+  font: normal 14px/44px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  color: #707070;
+}
+
+#loginBox .loginInfo li, #registerBox .loginInfo li {
+  margin-top: 10px;
+  height: 44px;
+}
+
+#loginBox .loginInfo li span, #registerBox .loginInfo li span {
+  float: left;
+  width: 72px;
+  text-align: right;
+}
+
+#registerBox .loginInfo li span.sp2 {
+  width: 30px;
+  color: #e72226;
+  text-align: center;
+  font: bold 20px/44px Arial;
+}
+
+#loginBox .loginInfo li input, #registerBox .loginInfo li input {
+  float: left;
+  margin-left: 14px;
+  width: 190px;
+  padding: 12px 0 12px 38px;
+  height: 20px;
+  font: normal 14px/20px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  border-width: 0px;
+  background-image: url(/Images/inputBg01.gif);
+}
+
+#loginBox .loginInfo li input.input04, #registerBox .loginInfo li input.input04 {
+  background-position: 0px -177px;
+}
+
+#registerBox .loginInfo li input.input02 {
+  background-position: 0px -62px;
+}
+
+#registerBox .loginInfo li input.input03 {
+  background-position: 0px -120px;
+}
+
+#loginBox .loginInfo li input:focus, #registerBox .loginInfo li input:focus {
+  background-image: url(/Images/inputBg02.gif);
+}
+
+#loginBox .loginInfo li.li0, #registerBox .loginInfo li.li0 {
+  padding-top: 10px;
+}
+
+#loginBox .loginInfo li .btn01 {
+  float: left;
+  margin-left: 85px;
+  width: 91px;
+  height: 35px;
+  text-align: center;
+  color: #fff;
+  font: normal 16px/36px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  background: url(/Images/btn01.jpg) no-repeat 0px -87px;
+}
+
+#loginBox .loginInfo li .btn02 {
+  float: left;
+  cursor: pointer;
+  margin-left: 60px;
+  text-decoration: blink;
+}
+
+#registerBox .loginInfo li .btn01 {
+  float: left;
+  margin-left: 84px;
+  width: 151px;
+  height: 43px;
+  background: url(/Images/btn01.jpg) no-repeat 0px -44px;
+  text-align: center;
+  color: #fff;
+  font: normal 16px/43px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+}
+
+/*内页banner*/
+#banner {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+#banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*上部功能条*/
+.topBox {
+  height: 102px;
+  background: url(/Images/repeatX01.jpg) repeat-x 0px -109px;
+}
+
+.hotNews {
+  position: relative;
+  float: left;
+  width: 460px;
+  padding-left: 20px;
+  padding-top: 14px;
+}
+
+.hotNews h3 {
+  width: 118px;
+  height: 34px;
+  background: url(/Images/icon03.png) no-repeat;
+  font: normal 18px/34px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  text-align: center;
+  color: #fff;
+}
+
+.hotNewsWrap {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2px;
+  width: 452px;
+  height: 38px;
+  background: url(/Images/icon03.png) no-repeat 0px -36px;
+}
+
+#hotNewsList {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 412px;
+}
+
+#hotNewsList li {
+  color: #646363;
+  padding-left: 32px;
+  width: 380px;
+  height: 38px;
+  font: normal 14px/38px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  background: url(/Images/icon01.png) no-repeat 20px -357px;
+}
+
+#hotNewsList li a {
+  color: #646363;
+}
+
+#hotNewsList li span {
+  float: right;
+}
+
+#newsPrev {
+  position: absolute;
+  display: block;
+  top: 60px;
+  right: 0px;
+  background: url(/Images/icon01.png) no-repeat 0px -311px;
+  width: 13px;
+  height: 8px;
+}
+
+#newsNext {
+  position: absolute;
+  display: block;
+  top: 74px;
+  right: 0px;
+  background: url(/Images/icon01.png) no-repeat 0px -333px;
+  width: 13px;
+  height: 8px;
+}
+
+#newsPrev:hover {
+  background-position: -28px -311px;
+}
+
+#newsNext:hover {
+  background-position: -28px -333px;
+}
+
+#quickNav {
+  float: left;
+  width: 360px;
+  height: 78px;
+  padding-top: 10px;
+  padding-left: 80px;
+}
+
+#quickNav li {
+  float: left;
+  margin-right: 1px;
+  width: 70px;
+  height: 78px;
+  background: url(/Images/icon03.png) no-repeat 0px -102px;
+}
+
+#quickNav li a {
+  display: block;
+  width: 70px;
+  height: 18px;
+  text-align: center;
+  padding-top: 60px;
+  color: #fff;
+  font: normal 12px/18px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  background: url(/Images/quickNav_02.png) no-repeat 0px 0px;
+}
+
+#quickNav li a:hover {
+  background-image: url(/Images/quickNav_01.png);
+}
+
+#quickNav li a.a1 {
+  background-position: 4px 6px;
+}
+
+#quickNav li a.a2 {
+  background-position: -66px 6px;
+}
+
+#quickNav li a.a3 {
+  background-position: -138px 6px;
+}
+
+#quickNav li a.a4 {
+  background-position: -206px 6px;
+}
+
+#quickNav li a.showMap {
+  background-position: -276px 6px;
+}
+
+/*页面中部区域*/
+#content {
+  background: url(/Images/contentBg.jpg) repeat;
+}
+
+#content .topBg {
+  background: url(/Images/topBg.jpg) no-repeat center top;
+}
+
+#content .topBg .bottomBg {
+  padding-top: 14px;
+  padding-bottom: 240px;
+  background: url(/Images/bottomBg.jpg) no-repeat center bottom;
+}
+
+/*左侧导航*/
+#leftBox {
+  float: left;
+  width: 239px;
+}
+
+#leftBox .navTitle {
+  position: relative;
+  background: url(/Images/navTitle.png) no-repeat 0px 0px;
+  width: 239px;
+  height: 139px;
+}
+
+#leftBox .nav2 {
+  background-position: 0px -634px;
+}
+
+#leftBox .nav3 {
+  background-position: 0px -318px;
+}
+
+#leftBox .nav4 {
+  background-position: 0px -478px;
+}
+
+#leftBox .nav5 {
+  background-position: 0px -157px;
+}
+
+#leftBox .navTitle h2 {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+  width: 208px;
+  height: 86px;
+}
+
+/*#leftBox .navTitle h2.h201 { background-position:0px 0px; }
+#leftBox .navTitle h2.h202 { background-position:0px -86px; }
+#leftBox .navTitle h2.h203 { background-position:0px -172px; }
+#leftBox .navTitle h2.h204 { background-position:0px -258px; }
+#leftBox .navTitle h2.h205 { background-position:0px -344px; }
+#leftBox .navTitle h2.h206 { background-position:0px -430px; }*/
+#leftNav {
+  margin-top: 4px;
+  width: 239px;
+}
+
+#leftNav a {
+  display: block;
+  width: 239px;
+  height: 48px;
+  text-align: center;
+  font: normal 16px/48px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  color: #715100;
+  background: url(/Images/leftBg.png) no-repeat 0px -218px;
+}
+
+#leftNav a:hover, #leftNav a.active {
+  background-position: 0px -170px;
+}
+
+#leftNav .d1 {
+  width: 239px;
+  height: 26px;
+  background: url(/Images/leftBg.png) no-repeat 0px -144px;
+}
+
+#leftNav .d2 {
+  width: 239px;
+  height: 10px;
+  background: url(/Images/leftBg.png) no-repeat 0px -266px;
+}
+
+.appDown {
+  margin-top: 4px;
+  width: 239px;
+  height: 315px;
+  background: url(/Images/leftBg.png) no-repeat 0px -286px;
+}
+
+/*右侧内容区域*/
+#rightBox {
+  float: left;
+  padding: 10px 4px 0px 4px;
+  margin-top: 4px;
+  margin-left: 4px;
+  width: 716px;
+  background: url(/Images/rightBoxBg02.png) repeat-y;
+}
+
+#rightBox .conTop {
+  height: 50px;
+  padding: 0 40px 20px 40px;
+}
+
+#rightBox .conTop h2.lanmuT {
+  float: left;
+  width: 180px;
+  height: 50px;
+  padding-left: 26px;
+  font: normal 20px/50px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  color: #565656;
+  background: url(/Images/icon01.png) no-repeat 0px -400px;
+}
+
+#rightBox .conTop .webTag {
+  float: right;
+  height: 50px;
+  width: 430px;
+  text-align: right;
+  font: normal 14px/50px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  color: #848484;
+}
+
+#rightBox .conTop .webTag a {
+  color: #848484;
+  padding: 0 4px;
+}
+
+#rightBox .conTop .webTag a:hover {
+  color: #f25b31;
+}
+
+#rightBox .conTop .webTag span {
+  color: #f25b31;
+  padding: 0 4px;
+}
+
+.conMidWrap01 {
+  width: 640px;
+  min-height: 600px;
+  margin: 0 auto;
+  border-top: 2px solid #65ba00;
+  padding: 15px;
+  padding-bottom: 50px;
+}
+
+.greenBorder {
+  height: 0px;
+  line-height: 0px;
+  overflow: hidden;
+  width: 676px;
+  margin: 0 auto;
+  border-bottom: 2px solid #65ba00;
+}
+
+#rightBox .info {
+  padding: 30px 40px 40px 40px;
+  overflow: hidden;
+}
+
+#rightBox .info .info_con {
+  float: left;
+  width: 540px;
+}
+
+#rightBox .info .info_con ul li {
+  position: relative;
+}
+
+#rightBox .info .info_con ul li em {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  line-height: 0px;
+  border-width: 5px;
+  border-color: transparent transparent transparent #999;
+  border-style: dashed dashed dashed solid;
+  left: 0px;
+  top: 8px;
+}
+
+#rightBox .info .info_con ul li a {
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  color: #676767;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+#rightBox .info .info_con ul li a:hover {
+  color: #ff7e00;
+}
+
+#rightBox .info .info_return {
+  float: right;
+  width: 85px;
+  height: 32px;
+  background: url(/Images/return_icon.png) no-repeat -2px -8px;
+}
+
+#rightBox .info .info_return:hover {
+  background-position: -2px -8px;
+}
+
+/* iPad 纵向与横向 - [portrait + landscape] */
+#showRightBar {
+  z-index: 999;
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 56px;
+  width: 68px;
+  height: 87px;
+  background: url(/Images/erd.png) no-repeat;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #showRightBar {
+    display: block;
+  }
+}
+
+/*右侧功能条*/
+#rightBar {
+  z-index: 100;
+  position: fixed;
+  _display: none;
+  top: 109px;
+  right: 0px;
+  -overflow: hidden;
+  width: 56px;
+  height: 100%;
+}
+
+#btnBar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 56px;
+  height: 100%;
+  background: #404040;
+}
+
+#slideBtn {
+  cursor: pointer;
+  position: absolute; /*top:0px;*/
+  top: 120px;
+  left: 0px;
+  width: 56px;
+  height: 360px;
+  background: url(/Images/rightBar_bg.jpg) no-repeat 0px 0px;
+  z-index: 99;
+}
+
+#xEwm {
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 56px;
+  height: 480px;
+  background: url(/Images/rightBar_bg1.jpg) no-repeat 0px 0px;
+  z-index: 88
+}
+
+#xEWM {
+  position: absolute;
+  top: 327px;
+  left: -157px;
+  z-index: 99;
+  display: none;
+}
+
+#btnBar a {
+  display: block;
+  position: absolute;
+  left: 3px;
+  width: 50px;
+  height: 20px;
+  padding-top: 30px;
+  background: url(/Images/icon02.png) no-repeat 0px -550px;
+  text-align: center;
+  font: normal 12px/20px "宋体";
+  color: #fff;
+}
+
+#btnBar a:hover {
+  filter: alpha(opacity:60);
+  opacity: 0.6;
+}
+
+#btnBar .tpBtn {
+  bottom: 109px;
+  background: #e5ad26 url(/Images/tarvelPark.png) no-repeat 13px -46px;
+  display: none;
+}
+
+#btnBar .orderBtn {
+  top: 0px;
+  height: 88px;
+  background: none;
+}
+
+#btnBar .showShare {
+  bottom: 56px;
+  background-color: #3ba333;
+  background-position: 14px -554px;
+}
+
+#btnBar .toTop {
+  bottom: 3px;
+  background-color: #727272;
+  background-position: 9px -634px;
+}
+
+#slideCon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 0px 6px 0px 8px;
+  width: 428px;
+  height: 100%;
+  background: #d7d7d7;
+}
+
+#slideCon .sideAD {
+  margin-top: 6px;
+  position: relative;
+  width: 428px;
+  height: 196px;
+}
+
+#slideCon .sideAD .adList {
+  position: relative;
+  width: 428px;
+  height: 196px;
+}
+
+#slideCon .sideAD .adList li {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 428px;
+  height: 196px;
+}
+
+#slideCon .sideAD .adList li img {
+  width: 428px;
+  height: 196px;
+}
+
+#slideCon .sideAD .adIcon {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 14px;
+  padding: 10px 0;
+  background: url(/Images/shadow40.png) repeat;
+}
+
+#slideCon .sideAD .adIcon a {
+  float: right;
+  margin-right: 12px;
+  width: 7px;
+  height: 7px;
+  border: 3px solid #d4d4d4;
+  background: #8c8c8c;
+}
+
+#slideCon .sideAD .adIcon a:hover, #slideCon .sideAD .adIcon a.active {
+  border-color: #c9363e;
+  background: #fff;
+}
+
+#slideCon .sideAD .markImg {
+  position: absolute;
+  top: 3px;
+  left: -2px;
+  width: 100px;
+  padding-left: 20px;
+  height: 31px;
+  background: url(/Images/icon06.png) no-repeat;
+  font: normal 14px/31px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  color: #fff;
+}
+
+#slideCon .sideNews {
+  margin-top: 6px;
+  padding-right: 16px;
+  background: #fff;
+}
+
+#slideCon .sideNews h3 {
+  position: relative;
+  height: 36px;
+}
+
+#slideCon .sideNews h3 a {
+  float: right;
+  color: #9f9f9f;
+  font: normal 12px/36px Arial;
+}
+
+#slideCon .sideNews h3 .markImg {
+  position: absolute;
+  top: 3px;
+  left: -2px;
+  width: 100px;
+  padding-left: 20px;
+  height: 31px;
+  background: url(/Images/icon06.png) no-repeat;
+  font: normal 14px/31px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+  color: #fff;
+}
+
+#slideCon .sideNews ul {
+  padding: 6px 0 6px 20px;
+}
+
+#slideCon .sideNews ul li {
+  height: 24px;
+  padding-left: 6px;
+  background: url(/Images/icon08.png) no-repeat 0px -175px;
+  font: normal 12px/24px "宋体";
+  color: #404040;
+}
+
+#slideCon .sideNews ul li a {
+  color: #404040;
+}
+
+#slideCon .sideNews ul li a:hover {
+  color: #f98100;
+}
+
+#slideCon .sideNews ul li a span {
+  float: right;
+}
+
+#slideCon .sideWeibo {
+  width: 428px;
+  height: 300px;
+  margin-top: 6px;
+  marign-bottom: 0px;
+  background: #fff;
+}
+
+/*行程包*/
+#tpBox {
+  display: none;
+  z-index: 101;
+  position: fixed;
+  bottom: 3px;
+  right: 61px;
+  width: 495px;
+  background: #404040;
+  height: 280px;
+  padding: 20px 20px 0px 10px;
+}
+
+#tpBox h3 {
+  padding-left: 40px;
+  float: left;
+  width: 150px;
+  font: normal 18px/30px "微软雅黑";
+  color: #c6c6c6;
+  background: url(/Images/tarvelPark.png) no-repeat 10px 4px;
+}
+
+#tpBox .toTp {
+  float: right;
+  font: normal 14px/32px "微软雅黑";
+  color: #fff;
+  width: 90px;
+  height: 32px;
+  background: #e5ad26;
+  text-align: center;
+}
+
+#tpBox .toTp:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+#tpBox ul {
+  margin-top: 10px;
+  height: 230px;
+}
+
+#tpBox ul li {
+  float: left;
+  margin-left: 10px;
+  width: 155px;
+  height: 115px;
+}
+
+#tpBox ul li img {
+  display: block;
+  width: 155px;
+  height: 90px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+#tpBox ul li:hover img {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+#tpBox ul li h4 {
+  font: normal 12px/20px "宋体";
+  color: #c6c6c6;
+}
+
+/*加入行程*/
+.joinTpShow {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 0px;
+  padding-left: 34px;
+  font: normal 14px/30px "微软雅黑";
+  color: #fff;
+  overflow: hidden;
+  height: 30px;
+  background: #399f19 url(/Images/tarvelPark.png) no-repeat 10px -145px;
+}
+
+.joinTpShow:hover {
+  color: #fff;
+}
+
+/*百度分享*/
+#bdShare {
+  display: none;
+  z-index: 101;
+  position: fixed;
+  bottom: 56px;
+  right: 61px;
+  width: 180px;
+  background: #404040;
+  height: 34px;
+  padding: 8px 0 8px 10px;
+}
+
+#bdShare .bdsharebuttonbox a {
+  float: left;
+  margin: 0 5px;
+  width: 34px;
+  height: 34px;
+  background: url(/Images/bdShare.gif);
+}
+
+#bdShare .bdsharebuttonbox a.bds_weixin {
+  background-position: -18px -8px;
+}
+
+#bdShare .bdsharebuttonbox a.bds_tsina {
+  background-position: -67px -8px;
+}
+
+#bdShare .bdsharebuttonbox a.bds_tqq {
+  background-position: -114px -8px;
+}
+
+#bdShare .bdsharebuttonbox a.bds_qzone {
+  background-position: -163px -8px;
+}
+
+#bdShare .bdsharebuttonbox a.bds_weixin:hover {
+  background-position: -18px -59px;
+}
+
+#bdShare .bdsharebuttonbox a.bds_tsina:hover {
+  background-position: -67px -59px;
+}
+
+#bdShare .bdsharebuttonbox a.bds_tqq:hover {
+  background-position: -114px -59px;
+}
+
+#bdShare .bdsharebuttonbox a.bds_qzone:hover {
+  background-position: -163px -59px;
+}
+
+/*页面底部*/
+#footer {
+  width: 100%;
+  height: 123px;
+  background: url(../images/footBg.jpg) repeat-x;
+  min-width: 1002px;
+}
+
+#footer .colorBar {
+  height: 5px;
+  width: 100%;
+  margin: 0 auto;
+  background: url(../images/colorBar.jpg) no-repeat center top;
+}
+
+#footer .copyright {
+  padding-top: 36px;
+  height: 36px;
+}
+
+#footer .copyright .toOct {
+  float: left;
+  width: 82px;
+  height: 36px;
+  background: url(../images/icon03.png) no-repeat -134px 0px;
+}
+
+#footer .copyright .toHappy {
+  margin-left: 10px;
+  float: left;
+  width: 82px;
+  height: 36px;
+  background: url(../images/icon03.png) no-repeat -234px 0px;
+}
+
+#footer .copyright .footLink {
+  margin-left: 180px;
+  float: left;
+  width: 340px;
+  height: 36px;
+  font: normal 12px/18px "宋体";
+}
+
+#footer .copyright .footLink p.p1 {
+  color: #c1c1c1;
+}
+
+#footer .copyright .footLink p.p1 a {
+  color: #c1c1c1;
+  padding: 0 4px;
+}
+
+#footer .copyright .footLink p.p1 a:hover {
+  color: #fff;
+}
+
+#footer .copyright .footLink p.p2 {
+  padding-left: 4px;
+  color: #545454;
+}
+
+#footer .copyright .footLink p.p2 a {
+  padding-left: 4px;
+  color: #545454;
+}
+
+#footer .copyright .footLink p.p2 a:hover {
+  color: #fff;
+}
+
+#footer .copyright .phone {
+  float: right;
+  text-align: right;
+  width: 190px;
+  background: url(../images/icon01.png) no-repeat 0px -660px;
+  font: normal 24px/36px Arial;
+  color: #3baf68;
+}
+
+#moreHappy {
+  position: absolute;
+  z-index: 100;
+  top: 42px;
+  left: 200px;
+  font: normal 12px/29px "宋体";
+  color: #5d5d5d;
+  width: 122px;
+  height: 29px;
+}
+
+#moreHappy .a1 {
+  text-indent: 2em;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font: normal 12px/29px "宋体";
+  color: #5d5d5d;
+  background: url(../images/moreHappyBg.png);
+  width: 122px;
+  height: 29px;
+}
+
+#moreHappy .linkList {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  padding-bottom: 14px;
+  padding-top: 6px;
+  left: 1px;
+  width: 120px;
+  background: url(../images/shadow80.png) repeat;
+}
+
+#moreHappy .linkList a {
+  display: block;
+  margin: 0 auto;
+  width: 116px;
+  text-align: center;
+  height: 29px;
+  margin-top: 2px;
+  color: #fff;
+}
+
+#moreHappy .linkList a:hover {
+  color: #fff;
+  background: #51bb7a;
+}
+
+/*更多图片*/
+.morePicList {
+  display: none;
+}
+
+/*园区地图*/
+#parkMapShadow {
+  z-index: 200;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/Images/shadow40.png) repeat;
+}
+
+#parkMapBg {
+  display: none;
+  z-index: 201;
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  margin-left: -470px;
+  width: 947px;
+  height: 896px;
+  background: url(/Images/mapBg.png) no-repeat;
+}
+
+#map {
+  position: absolute;
+  top: 11px;
+  left: 10px;
+  background: #ffc;
+  width: 926px;
+  height: 545px;
+  overflow: hidden;
+}
+
+#map img {
+  cursor: hand;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1000px;
+  height: auto;
+}
+
+.mapBtn {
+  position: absolute;
+  top: 490px;
+  left: 240px;
+  width: 450px;
+  height: 118px;
+  background: url(/Images/mapBtn.png) no-repeat;
+}
+
+#amp {
+  position: absolute;
+  top: 39px;
+  left: 24px;
+  width: 126px;
+  height: 46px;
+  background: url(about:blank);
+}
+
+#normal {
+  position: absolute;
+  top: 9px;
+  left: 175px;
+  width: 100px;
+  height: 100px;
+  background: url(about:blank);
+}
+
+#shr {
+  position: absolute;
+  top: 39px;
+  right: 24px;
+  width: 126px;
+  height: 46px;
+  background: url(about:blank);
+}
+
+.downloadMap {
+  position: absolute;
+  top: 833px;
+  left: 584px;
+  width: 169px;
+  height: 46px;
+  background: url(about:blank);
+}
+
+#hideMap {
+  display: block;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 60px;
+  height: 60px;
+  background: url(/Images/icon06.png) no-repeat 0px -560px;
+}
+
+/*更多地图*/
+.building {
+  text-align: center;
+  font: normal 18px/60px Verdana, \5FAE\8F6F\96C5\9ED1;
+  *font-family: \5FAE\8F6F\96C5\9ED1;
+}
+

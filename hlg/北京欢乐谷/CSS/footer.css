@@ -1,0 +1,416 @@
+.newsZone {
+  width: 100%;
+  height: 930px;
+  background: transparent url('../images/www/news_bg.jpg') no-repeat scroll center top;
+  position: relative;
+}
+
+.news_box {
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  right: 100px;
+  top: 60px;
+}
+
+.news_box a {
+  display: inline-block;
+  width: 100%;
+  color: rgb(88, 88, 88);
+  font-size: 12px;
+  margin-bottom: 10px;
+  position: relative;
+  font-family: "宋体";
+}
+
+.news_box a i {
+  color: rgb(249, 94, 0);
+  font-size: 12px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.news_box a:hover {
+  color: rgb(17, 17, 17);
+}
+
+.news_box span {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  cursor: pointer;
+}
+
+.news_box .news_box_title {
+  font-size: 30px;
+  color: rgb(17, 17, 17);
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+.news_box .news_box_title span {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+}
+
+.news_box .news_box_title span em {
+  display: inline-block;
+  width: 40%;
+  height: 4px;
+  background: rgb(255, 174, 0) none repeat scroll 0% 0%;
+  float: left;
+}
+
+.news_box .news_box_title span i {
+  display: inline-block;
+  width: 60%;
+  height: 4px;
+  background: rgb(0, 182, 227) none repeat scroll 0% 0%;
+  float: left;
+}
+
+.news_box .news_box_title a {
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  color: rgb(80, 80, 80);
+  font-size: 16px;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  font-family: "微软雅黑", "宋体";
+}
+
+.news_box .news_box_title a:hover {
+  color: rgb(17, 17, 17);
+}
+
+.news_box .news_box_title a i {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: transparent url('../images/icon.png') no-repeat scroll -829px -150px;
+  margin-left: 5px;
+  position: absolute;
+  top: 0px;
+}
+
+.news_box_link {
+  position: relative;
+  left: 350px;
+  top: 300px;
+  width: 810px;
+  height: 160px;
+}
+
+.news_box_link a {
+  display: inline-block;
+  width: 200px;
+  height: 160px;
+  background-color: #33ccff;
+  float: left;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  /*color: rgb(255, 25, 255);*/
+  font-size: 30px;
+  text-align: center;
+  line-height: 160px;
+  margin-top: 30px;
+  margin-left: 200px;
+  transition: all 1s;
+  /*padding-left: 30px;*/
+}
+.news_box_link a:hover{
+  font-weight: bold;
+  color:greenyellow;
+  transform: rotateY(360deg);
+  background-color:hotpink;
+  color: greenyellow;
+}
+
+.news_box_link img {
+  float: left;
+  padding-left:30px;
+  cursor: pointer;
+  
+}
+.news_box_link img:hover{
+  transform: rotate(55deg);
+translate3d(20,20,20)：
+translatex(50px);
+}
+
+.news_box_link .link_block01:hover {
+  opacity: 0.8;
+translatex(50px);
+translate3d(20px 20px 20px)
+}
+
+.news_box_link .link_block02 {
+  position: absolute;
+  top: -160px;
+  left: 200px;
+  background: rgb(217, 77, 28) none repeat scroll 0% 0%;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+}
+
+.news_box_link .link_block02 em {
+  width: 0px;
+  height: 0px;
+  font-size: 0px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: rgb(217, 77, 28) transparent transparent;
+  overflow: hidden;
+  position: absolute;
+  left: 86px;
+  top: 160px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.news_box_link .link_block02:hover {
+  background: rgb(255, 122, 75) none repeat scroll 0% 0%;
+}
+
+.link_block02.link_block02:hover em {
+  border-color: rgb(255, 122, 75) transparent transparent;
+}
+
+.news_box_link .link_block03 {
+  position: absolute;
+  top: 160px;
+  left: 400px;
+  background: rgb(145, 191, 19) none repeat scroll 0% 0%;
+}
+
+.news_box_link .link_block03:hover {
+  background: rgb(168, 218, 32) none repeat scroll 0% 0%;
+}
+
+.news_box_link .link_block04 {
+  background: rgb(255, 126, 0) none repeat scroll 0% 0%;
+}
+
+.news_box_link .link_block04:hover {
+  background: rgb(254, 155, 58) none repeat scroll 0% 0%;
+}
+
+.news_box_link .link_block04 em {
+  width: 0px;
+  height: 0px;
+  font-size: 0px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent rgb(255, 126, 0) transparent transparent;
+  overflow: hidden;
+  position: absolute;
+  left: -30px;
+  top: 72px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.footer {
+  width: 100%;
+  height: 164px;
+  padding-top: 4px;
+  position: relative;
+  background: transparent url('../images/www/footer_bg.jpg') no-repeat scroll center 4px;
+}
+
+.footer .color_line {
+  width: 100%;
+  height: 4px;
+  background: transparent url('../images/topline.jpg') no-repeat scroll center top;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.footer_left {
+  width: 700px;
+  margin-top: 20px;
+  float: left;
+}
+
+.footer_left img {
+  float: left;
+  width: 111px;
+  height: 111px;
+}
+
+.footer_left .quick_link {
+  float: left;
+  margin-top: 10px;
+}
+
+.footer_left .quick_link a {
+  color: rgb(69, 69, 69);
+  border-left: 1px solid rgb(69, 69, 69);
+  padding: 0px 10px;
+  transition: all 0.3s ease 0s;
+}
+
+.footer_left .quick_link a:hover {
+  color: rgb(236, 105, 47);
+}
+
+.footer_left .contact_us {
+  float: left;
+  font-family: "Arial", "微软雅黑";
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 80%;
+}
+
+.footer_left .contact_us p {
+  float: left;
+  margin-right: 25px;
+  font-size: 22px;
+  color: rgb(255, 90, 0);
+}
+
+.footer_left h5 {
+  color: rgb(127, 127, 127);
+  font-weight: normal;
+  margin-top: 5px;
+  float: left;
+  margin-left: 10px;
+  width: 80%;
+}
+
+.footer_left h5 span {
+  padding: 0px 18px;
+}
+
+.footer_left h5 a {
+  color: rgb(69, 69, 69);
+  transition: all 0.3s ease 0s;
+}
+
+.footer_left h5 a:hover {
+  color: rgb(236, 105, 47);
+}
+
+.footer_right {
+  float: left;
+  width: 300px;
+  margin-top: 20px;
+  position: relative;
+  left: 300px;
+}
+
+.site_link_wrap {
+  width: 180px;
+  position: absolute;
+  right: 18px;
+}
+
+.footer_right .site_link {
+  display: inline-block;
+  width: 180px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  color: rgb(137, 137, 137);
+  font-family: "宋体";
+  border: 1px solid rgb(184, 184, 184);
+  border-radius: 3px;
+  outline: medium none;
+  text-indent: 10px;
+  position: relative;
+  z-index: 5;
+  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+}
+
+.footer_right .site_link i {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  background: transparent url('../images/icon.png') no-repeat scroll -108px -418px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.footer_right .site_link_box {
+  border-width: 1px 1px medium;
+  border-style: solid solid none;
+  border-color: rgb(184, 184, 184) rgb(184, 184, 184) currentcolor;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  border-radius: 3px 3px 0px 0px;
+  width: 180px;
+  position: absolute;
+  right: -2px;
+  bottom: 32px;
+  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
+  display: none;
+  animation: 0.3s ease 0s normal both 1 running;
+}
+
+
+.footer_right .site_link_box a {
+  display: inline-block;
+  color: rgb(137, 137, 137);
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  text-indent: 10px;
+  transition: all 0.3s ease 0s;
+  background: rgb(255, 255, 255) none repeat  0 0;
+}
+
+.footer_right .site_link_box a:hover {
+  background: rgb(137, 137, 137) none repeat scroll 0% 0%;
+  color: rgb(255, 255, 255);
+  text-indent: 14px;
+}
+
+.site_link_wrap.site_link_wrap:hover .site_link {
+  border-radius: 0px 0px 3px 3px;
+  background: rgb(237, 236, 236) none repeat scroll 0% 0%;
+}
+
+.site_link_wrap.site_link_wrap:hover .site_link_box {
+  display: block;
+}
+
+.site_link_wrap.site_link_wrap:hover .whiteBg {
+}
+
+.footer_site_logo {
+  position: absolute;
+  right: 0px;
+  top: 50px;
+}
+
+.footer_site_logo a {
+  float: left;
+  margin-left: 15px;
+}
+
+.footer_site_logo .footer_logo {
+  transition: all 0.3s ease 0s;
+}
+
+.footer_site_logo .footer_logo:hover {
+  opacity: 0.7;
+}

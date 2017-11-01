@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>上海欢乐谷</title>
+  <link rel="stylesheet" href="style/base.css">
+  <script src="js/style.js"></script>
+  <script src="js/Common.js"></script>
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/login.js"></script>
+</head>
+<body>
+<!--顶部导航-->
+<div class="topnav">
+  <div class="toplogo"><a href="javascript:;"></a></div>
+  <div class="topNotice">
+    <div class="starttime">
+      <em></em>
+      <span>开闭园时间： 04月29日-06月23日09:30-21:00</span>
+    </div>
+    <div class="topnotice-con">
+      <em></em>
+      <div class="slide-con">
+        <div class="slide" id="slide"><a href="javascript:;">• 中国旅游日，上海欢乐谷诚意满满三天半价狂欢</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+            href="javascript:;">• 中国旅游日，上海欢乐谷诚意满满三天半价狂欢</a></div>
+      </div>
+    </div>
+    <div class="topcon_right">
+      <a href="javascript:;" class="yunying">项目运营时间</a>
+      <a href="javascript:;" class="showtime">会员登录</a>
+      <input type="search" placeholder="站内搜索" class="search_con">
+      <span class="search_btn"></span>
+      <!--<audio src="images/蓝精灵.mp3" autoplay></audio>-->
+    </div>
+  </div>
+  <div class="topNotice_right"><a href="javascript:;"><img src="images/mayalogo.png" alt=""></a></div>
+</div>
+<!--第二个导航-->
+<div class="second_nav">
+  <div class="second_nav_con">
+    <ul class="second_nav_first" style="display: block">
+      <li>
+        <a href="javascript:;" class="second_nav_a a1">乐园指南</a>
+        <ul class="second_nav_ul ul1">
+          <li>
+            <a href="javascript:;" class="ul1a1"></a>
+            <em>园区地图</em>
+          </li>
+          <li>
+            <a href="javascript:;" class="ul1a2" ></a>
+            <em>阳光港区</em>
+          </li>
+          <li>
+            <a href="javascript:;" class="ul1a3"></a>
+            <em>欢乐时光区</em>
+          </li>
+          <li>
+            <a href="javascript:;" class="ul1a4"></a>
+            <em>上海滩区</em>
+          </li>
+          <li>
+            <a href="javascript:;" class="ul1a5"></a>
+            <em>香格里拉区</em>
+          </li>
+          <li>
+            <a href="javascript:;" class="ul1a6"></a>
+            <em>欢乐海洋区</em>
+          </li>
+          <li>
+            <a href="javascript:;" class="ul1a7"></a>
+            <em>金矿镇区</em>
+          </li>
+          <li>
+            <a href="javascript:;" class="ul1a8"></a>
+            <em>飓风湾区</em>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="javascript:;" class="second_nav_a a2">节庆表演</a>
+        <ul class="second_nav_ul ul2" id="secondnavul2">
+          <li><a href="javascript:;" class="ul2a1"></a><em class="ul2em1">最新活动</em></li>
+          <li><a href="javascript:;" class="ul2a2"></a><em
+              class="ul2em2">最新优惠</em></li>
+          <li><a href="javascript:;" class="ul2a3"></a><em class="ul2em3">全年节庆</em></li>
+        </ul>
+      </li>
+      <li><a href="javascript:;" class="second_nav_a a3">游玩攻略</a>
+        <ul class="second_nav_ul ul3" id="ul3ul3">
+          <li><a href="javascript:;" class="ul3a1"></a><em>公园时间</em></li>
+          <li><a href="javascript:;" class="ul3a2"></a><em>路线推荐</em></li>
+          <li><a href="javascript:;" class="ul3a3"></a><em>星光夜场</em></li>
+          <li><a href="javascript:;" class="ul3a4"></a><em>园内交通</em></li>
+          <li><a href="javascript:;" class="ul3a5"></a><em>美食购物</em></li>
+        </ul>
+      </li>
+      <li><a href="javascript:;" class="second_nav_a a4">在线购票</a>
+        <ul class="second_nav_ul ul4" >
+          <li><a href="javascript:;" class="ul4a1"></a><em id="ul4ul4a">门票</em></li>
+          <li><a href="javascript:;" class="ul4a2"></a><em id="ul4ul4b">年卡</em></li>
+        </ul>
+      </li>
+      <li><a href="javascript:;" class="second_nav_a a5">游客服务</a>
+        <ul class="second_nav_ul ul3" id="ul5ul3">
+          <li><a href="javascript:;" class="ul3a1"></a><em>交通指南</em></li>
+          <li><a href="javascript:;" class="ul3a2"></a><em>团队服务</em></li>
+          <li><a href="javascript:;" class="ul3a3"></a><em>常见问题</em></li>
+          <li><a href="javascript:;" class="ul3a4"></a><em>园内交通</em></li>
+          <li><a href="javascript:;" class="ul3a5"></a><em>留言咨询</em></li>
+        </ul>
+      </li>
+      <li><a href="javascript:;" class="second_nav_a a6">关于我们</a>
+        <ul class="second_nav_ul ul3" id="ul6ul3">
+          <li><a href="javascript:;" class="ul3a1"></a><em>欢乐谷简介</em></li>
+          <li><a href="javascript:;" class="ul3a2"></a><em>人才招聘</em></li>
+          <li><a href="javascript:;" class="ul3a3"></a><em>招商合作</em></li>
+          <li><a href="javascript:;" class="ul3a4"></a><em>欢乐分享</em></li>
+          <li><a href="javascript:;" class="ul3a5"></a><em>联系我们</em></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--滚动广告-->
+<div class="banner">
+  <div class="col2">
+    <div class="col2-top" id="slide2">
+      <ul class="imgs">
+        <li><a href="#"><img src="images/banner15.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/banner18.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/banner19.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/banner22.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/banner23.jpg" alt=""></a></li>
+      </ul>
+      <!--箭头-->
+      <div class="arrow">
+        <i class="iconfont arrow-left">&#xe679;</i>
+        <i class="iconfont arrow-right">&#xe6a3;</i>
+      </div>
+      
+      <!--小圆点-->
+      <ul class="circle">
+        <li class="current"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--游园信息-->
+<div class="park">
+  <div class="park_con_top">
+    <div class="suggest">
+      <a href="javascript:;">
+        <img src="images/bottom_con_pic01.png" alt="">
+        <p>巅峰游乐推荐</p>
+        <div class="suggest_Con_big">热推</div>
+        <div class="suggest_Con_light"></div>
+      </a>
+    </div>
+    <div class="suggest">
+      <a href="javascript:;">
+        <img src="images/bottom_con_pic02.png" alt="">
+        <p>青春挑战推荐</p>
+        <div class="suggest_Con_com2">推荐</div>
+        <div class="suggest_Con_light"></div>
+      </a>
+    </div>
+    <div class="suggest">
+      <a href="javascript:;">
+        <img src="images/bottom_con_pic03.png" alt="">
+        <p>浪漫情侣推荐</p>
+        <div class="suggest_Con_com2">推荐</div>
+        <div class="suggest_Con_light"></div>
+      </a>
+    </div>
+    <div class="suggest">
+      <a href="javascript:;">
+        <img src="images/bottom_con_pic04.png" alt="">
+        <p>亲子合家推荐</p>
+        <div class="suggest_Con_com2">推荐</div>
+        <div class="suggest_Con_light"></div>
+      </a>
+    </div>
+  </div>
+  <div class="bottomCon_bottom" id="About_Search">
+    <!-- bottomCon_bottom_box -->
+    <div class="bottomCon_bottom_box bottomCon_bottom_box1" id="parkneedkonw">
+      <a href="javascript:;" class="know_btn"><em>游园须知</em></a>
+    </div>
+    
+    <!-- bottomCon_bottom_box -->
+    <div class="bottomCon_bottom_box bottomCon_bottom_box2">
+      <em>交通指南</em>
+      
+      <div class="bottomCon_bottom_box2_btn">
+        <a href="javascript:;" class="a1"></a><span class="subway subway1">地铁</span>
+        <a href="javascript:;" class="a2"></a><span class="subway subway2">公交</span>
+        <a href="javascript:;" class="a3"></a><span class="subway subway3">自驾</span>
+      </div>
+    </div>
+    
+    <!-- bottomCon_bottom_box -->
+    <div class="bottomCon_bottom_box bottomCon_bottom_box3">
+      <p class="p1"><i></i>客服电话</p>
+      <p class="p2">021-33552222</p>
+      
+      <a href="javascript:;" class="bottomCon_bottom_box3_btn">留言咨询</a>
+    </div>
+    
+    <!-- bottomCon_bottom_box -->
+    <div class="bottomCon_bottom_box bottomCon_bottom_box4">
+      <div class="bottomCon_bottom_box4_left">
+        <img src="images/code.jpg" alt="">
+      </div>
+      <div class="bottomCon_bottom_box4_right">
+        <a href="javascript:;" target="_top" class="a1">关注</a>
+        <a href="javascript:;" target="_top" class="a2">关注</a>
+        <a href="javascript:;" class="a3">关注</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--底部信息-->
+<div class="wrap1920" id="footer">
+  <div class="wrap1000">
+    <!-- 底部左侧 -->
+    <div class="footer_left">
+      <div class="footer_left_logo">
+        <img src="images/hqlogo.png" alt="">
+      </div>
+      <div class="quick_link">
+        <a href="javascript:;" style="border-left: medium none;">关于我们</a>
+        <a href="javascript:;">人才招聘</a>
+        <a href="javascript:;">联系我们</a>
+      </div>
+      <div class="contact_us">
+        <p>copyright © 2002-2017.All Rights Reserved.上海欢乐谷版权所有</p>
+      </div>
+      <h5>联系我们：上海松江区林湖路888号 <a href="javascript:;" target="_top">粤ICP备08102613号-3</a> 本网站由 <a href="javascript:;"
+                                                                                              target="_top">[ 互动力 承建 运营
+        ]</a></h5>
+      
+      <div class="clear"></div>
+    </div>
+    
+    <!-- 底部右侧 -->
+    <div class="footer_right">
+      <!-- 友情链接 -->
+      <div class="site_link_wrap">
+        <a href="javascript:;" class="site_link">连锁欢乐谷<i></i></a>
+        <div class="site_link_box">
+          <a target="_top" href="javascript:;">深圳欢乐谷</a>
+          <a target="_top" href="javascript:;">北京欢乐谷</a>
+          <a target="_top" href="javascript:;">上海欢乐谷</a>
+          <a target="_top" href="javascript:;">成都欢乐谷</a>
+          <a target="_top" href="javascript:;">武汉欢乐谷</a>
+          <a target="_top" href="javascript:;">天津欢乐谷</a>
+          <div class="clear"></div>
+        </div>
+        <div class="whiteBg"></div>
+      </div>
+      <!-- 百度分享 -->
+      <div class="footer_site_share">
+        <div class="bdsharebuttonbox bdshare-button-style1-32" data-bd-bind="1495039153666">
+          <a href="javascript:;" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+          <a href="javascript:;" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+          <a href="javascript:;" class="bds_more" data-cmd="more"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--登陆框-->
+<div class="wrap" id="wrap">
+  <div class="register-wrap" id="register-wrap">
+    <div class="register" id="register">
+      <div class="register-top" id="reg-top" style="display: block;">
+        <h2 class="normal" id="normal" style="border-bottom: medium none;">普通登录</h2>
+        <h2 class="nopassword" id="nopw" style="border-bottom: 2px solid rgb(255, 24, 119);">手机无密码登录</h2>
+        <a id="qrcode" href="#"></a>
+      </div>
+      <!--普通登录-->
+      <div class="register-con" id="rc" style="display: none;">
+        <form action="#">
+          <ul>
+            <li id="rc-inner-num" style="display: block;">
+              <i></i>
+              <span>请输入昵称/邮箱/手机号码</span>
+            </li>
+            <li id="rc-inner-virity" style="display: none;">
+              <i></i>
+              <span>请输入密码</span>
+            </li>
+            <li id="rc-innerError" style="">
+              <i style=""></i>
+              <span style="">您输入的用户名或密码不正确</span>
+            </li>
+            <li class="form-group">
+              <input name="phone-num" class="form-control" placeholder="昵称/邮箱/手机号码" type="text">
+              <span class="fa fa-check success"
+                    style="display:none;color:green;position:relative;left:-25px;top:5px;"></span>
+            
+            </li>
+            <li class="form-group">
+              <input name="password" id="pass1" class="form-control" placeholder="密码" type="password">
+            
+            </li>
+            <li class="read">
+              <input class="ck" name="check" value="1" checked="checked" type="checkbox">
+              <b>2周内自动登录</b>
+              <a href="#">忘记密码？</a>
+            </li>
+            <li>
+              <button class="submit" type="submit" id="login-btn" style="border-radius:5px;">立即登录</button>
+            </li>
+            <li>
+              <a href="#" class="haiwai">海外手机登录</a>
+              <a href="#" class="zhuce">新用户注册</a>
+            </li>
+            <li class="zjdl">
+              无需注册即可登录：
+            </li>
+            <li>
+              <div class="qq" style="border-radius:5px;"></div>
+              <div class="weixin" style="border-radius:5px;"></div>
+              <div class="weibo" style="border-radius:5px;"></div>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <!--手机无密码登录-->
+      <div class="login-con" id="lc" style="display: block;">
+        <form action="#">
+          <ul>
+            <li id="inner-num" style="display: block;">
+              <i></i>
+              <span>请输入手机号码</span>
+            </li>
+            <li id="inner-virity" style="display: none;">
+              <i></i>
+              <span>请输入验证码</span>
+            </li>
+            <li class="lg-num  form-group">
+              <select name="country" id="country" class="info-select" style="border-radius:5px;">
+                <option value="中国" selected="selected">中国</option>
+                <option>喀麦隆</option>
+                <option>贝宁</option>
+                <option>马达加斯加</option>
+                <option>卢旺达</option>
+                <option>塞舌尔</option>
+                <option>科特迪瓦</option>
+                <option>埃及</option>
+                <option>毛里求斯</option>
+                <option>布基纳法索</option>
+                <option>厄立特里亚</option>
+                <option>圣多美和普林西比</option>
+                <option>安哥拉</option>
+                <option>利比亚</option>
+                <option>塞卜泰</option>
+                <option>津巴布韦</option>
+                <option>几内亚</option>
+                <option>塞拉利昂</option>
+                <option>留尼汪</option>
+                <option>加蓬</option>
+                <option>加纳</option>
+                <option>坦桑尼亚</option>
+                <option>马里</option>
+                <option>索马里</option>
+                <option>undefined</option>
+                <option>毛里塔尼亚</option>
+                <option>乌干达</option>
+                <option>乍得</option>
+                <option>马约特岛</option>
+                <option>科摩罗</option>
+                <option>博茨瓦那</option>
+                <option>塞内加尔</option>
+                <option>斯威士兰</option>
+                <option>几内亚(比绍)</option>
+                <option>民主刚果</option>
+                <option>中非共和国</option>
+                <option>莱索托</option>
+                <option>刚果</option>
+                <option>南非</option>
+                <option>利比里亚</option>
+                <option>突尼斯</option>
+                <option>赞比亚</option>
+                <option>尼日尔</option>
+                <option>西撒哈拉</option>
+                <option>多哥</option>
+                <option>纳米比亚</option>
+                <option>莫桑比克</option>
+                <option>梅利利亚</option>
+                <option>埃塞俄比亚</option>
+                <option>摩洛哥</option>
+                <option>马拉维</option>
+                <option>尼日利亚</option>
+                <option>佛得角</option>
+                <option>布隆迪</option>
+                <option>阿尔及利亚</option>
+                <option>吉布提</option>
+                <option>加那利群岛</option>
+                <option>冈比亚</option>
+                <option>赤道几内亚</option>
+                <option>苏丹</option>
+                <option>肯尼亚</option>
+                <option>新加坡</option>
+                <option>韩国</option>
+                <option>叙利亚</option>
+                <option>乌兹别克斯坦</option>
+                <option>巴林</option>
+                <option>日本</option>
+                <option>约旦</option>
+                <option>越南</option>
+                <option>吉尔吉斯斯坦</option>
+                <option>泰国</option>
+                <option>斯里兰卡</option>
+                <option>阿联酋</option>
+                <option>老挝</option>
+                <option>阿富汗</option>
+                <option>中国澳门</option>
+                <option>塔吉克斯坦</option>
+                <option>朝鲜</option>
+                <option>巴勒斯坦</option>
+                <option>中国香港</option>
+                <option>伊拉克</option>
+                <option>黎巴嫩</option>
+                <option>科威特</option>
+                <option>文莱</option>
+                <option>undefined</option>
+                <option>马尔代夫</option>
+                <option>印度尼西亚</option>
+                <option>以色列</option>
+                <option>蒙古</option>
+                <option>阿曼</option>
+                <option>印度</option>
+                <option>缅甸</option>
+                <option>马来西亚</option>
+                <option>东帝汶</option>
+                <option>也门共和国</option>
+                <option>不丹</option>
+                <option>柬埔寨</option>
+                <option>巴基斯坦</option>
+                <option>孟加拉国</option>
+                <option>沙特阿拉伯</option>
+                <option>土库曼斯坦</option>
+                <option>卡塔尔</option>
+                <option>尼泊尔</option>
+                <option>哈萨克斯坦</option>
+                <option>菲律宾</option>
+                <option>台湾</option>
+                <option>伊朗</option>
+                <option>哥斯达黎加</option>
+                <option>古巴</option>
+                <option>多米尼加共和国</option>
+                <option>墨西哥</option>
+                <option>尼加拉瓜</option>
+                <option>巴拿马</option>
+                <option>荷属安地列斯群岛</option>
+                <option>萨尔瓦多</option>
+                <option>英属维尔京群岛</option>
+                <option>波多黎各</option>
+                <option>美属维尔京群岛</option>
+                <option>安圭拉(英)</option>
+                <option>圣卢西亚</option>
+                <option>圣文森特和格纳丁斯</option>
+                <option>荷属安德列斯</option>
+                <option>瓜德罗普</option>
+                <option>洪都拉斯</option>
+                <option>危地马拉</option>
+                <option>格鲁吉亚</option>
+                <option>亚美尼亚</option>
+                <option>阿塞拜疆</option>
+                <option>白俄罗斯</option>
+                <option>俄罗斯联邦</option>
+                <option>乌克兰</option>
+                <option>匈牙利</option>
+                <option>冰岛</option>
+                <option>马耳他</option>
+                <option>摩纳哥</option>
+                <option>挪威</option>
+                <option>罗马尼亚</option>
+                <option>圣马力诺</option>
+                <option>瑞典</option>
+                <option>瑞士</option>
+                <option>爱沙尼亚</option>
+                <option>拉脱维亚</option>
+                <option>立陶宛</option>
+                <option>摩尔多瓦</option>
+                <option>土耳其</option>
+                <option>斯洛文尼亚</option>
+                <option>捷克共和国</option>
+                <option>斯洛伐克</option>
+                <option>马其顿</option>
+                <option>波斯尼亚-黑塞哥维那共和</option>
+                <option>梵蒂冈城国</option>
+                <option>荷兰</option>
+                <option>克罗地亚</option>
+                <option>希腊</option>
+                <option>爱尔兰</option>
+                <option>比利时</option>
+                <option>塞浦路斯</option>
+                <option>丹麦</option>
+                <option>英国</option>
+                <option>德国</option>
+                <option>法国</option>
+                <option>意大利</option>
+                <option>卢森堡</option>
+                <option>葡萄牙</option>
+                <option>波兰</option>
+                <option>西班牙</option>
+                <option>阿尔巴尼亚</option>
+                <option>安道尔</option>
+                <option>列支敦士登</option>
+                <option>塞黑</option>
+                <option>奥地利</option>
+                <option>保加利亚</option>
+                <option>芬兰</option>
+                <option>直布罗陀</option>
+                <option>多米尼克</option>
+                <option>百慕大</option>
+                <option>加拿大</option>
+                <option>美国</option>
+                <option>格陵兰</option>
+                <option>汤加</option>
+                <option>澳大利亚</option>
+                <option>库克群岛</option>
+                <option>瑙鲁</option>
+                <option>新喀里多尼亚</option>
+                <option>瓦努阿图</option>
+                <option>所罗门群岛</option>
+                <option>萨摩亚</option>
+                <option>图瓦卢</option>
+                <option>密克罗尼西亚联邦</option>
+                <option>马绍尔群岛</option>
+                <option>基里巴斯</option>
+                <option>法属玻利尼西亚</option>
+                <option>新西兰</option>
+                <option>斐济</option>
+                <option>巴布亚新几内亚</option>
+                <option>帕劳共和国</option>
+                <option>土阿莫土群岛</option>
+                <option>土布艾群岛</option>
+                <option>社会群岛</option>
+                <option>马克萨斯群岛</option>
+                <option>瓦利斯和浮图纳</option>
+                <option>盖比群岛</option>
+                <option>诺福克岛</option>
+                <option>智利</option>
+                <option>哥伦比亚</option>
+                <option>法属圭亚那</option>
+                <option>圭亚那</option>
+                <option>库腊索岛</option>
+                <option>巴拉圭</option>
+                <option>秘鲁</option>
+                <option>苏里南</option>
+                <option>委内瑞拉</option>
+                <option>乌拉圭</option>
+                <option>厄瓜多尔</option>
+                <option>安提瓜和巴布达</option>
+                <option>阿鲁巴岛</option>
+                <option>巴哈马</option>
+                <option>巴巴多斯</option>
+                <option>开曼群岛</option>
+                <option>格林纳达</option>
+                <option>萨巴</option>
+                <option>海地</option>
+                <option>牙买加</option>
+                <option>马提尼克</option>
+                <option>蒙特塞拉特</option>
+                <option>圣文森特和格林纳丁斯</option>
+                <option>特立尼达和多巴哥</option>
+                <option>特克斯和凯科斯群岛</option>
+                <option>英属维尔京群岛</option>
+                <option>圣其茨-尼维斯</option>
+                <option>圣马丁岛</option>
+                <option>圣皮埃尔和密克隆</option>
+                <option>阿根廷</option>
+                <option>伯利兹</option>
+                <option>玻利维亚</option>
+                <option>巴西</option>
+                <option>博内尔</option>
+                <option>圣卢西亚</option>
+              </select>
+              <input name="phone-num" class="form-control" placeholder="手机号码" value="18984978956" type="text">
+              <span class="fa fa-check success"
+                    style="display:none;color:green;position:relative;left:-25px;top:5px;"></span>
+            </li>
+            <li class="password form-group">
+              <input name="password" id="pass" class="form-control" placeholder="动态密码" type="password">
+            
+            </li>
+            <li>
+              <button class="getcode" id="getcode" style="border-radius:5px;">获取手机动态密码</button>
+            </li>
+            <li class="read">
+              <input class="ck" name="check" value="1" checked="checked" type="checkbox">
+              <b>2周内自动登录</b>
+              <a href="#">忘记密码？</a>
+            </li>
+            
+            <li>
+              <button class="submit" type="submit" id="login-btn1" style="border-radius:5px;">登录</button>
+            </li>
+            <li>
+              <a href="#" class="haiwai">海外手机登录</a>
+              <a href="#" class="zhuce">新用户注册</a>
+            </li>
+            <li class="zjdl">
+              无需注册即可登录：
+            </li>
+            <li>
+              <div class="qq" style="border-radius:5px;"></div>
+              <div class="weixin" style="border-radius:5px;"></div>
+              <div class="weibo" style="border-radius:5px;"></div>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <!-- 扫码登录 -->
+      <div class="saoma" id="sm" style="display: none;">
+        <div class="screen-tu" id="screen"></div>
+        <div class="qr-code">
+          <img src="images/code.jpg" alt="">
+        </div>
+        <div class="link">
+          <a href="#">点击下载欢乐谷APP</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--遮罩层-->
+<div id="cover"></div>
+</body>
+</html>

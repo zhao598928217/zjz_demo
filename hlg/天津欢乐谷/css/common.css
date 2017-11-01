@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+fieldset, img, input, button, textarea {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+}
+
+body {
+  font: normal 14px/1.5 "微软雅黑";
+  background-color: #fff;
+}
+
+img {
+  border: 0;
+  /*去除图片底部的3px*/
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+.w {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:after {
+  display: block;
+  content: '';
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.oh{
+  overflow: hidden;
+}
+.pa {
+  position: absolute;
+}
+
+.pr {
+  position: relative;
+}
+
+.pf {
+  position: fixed;
+}
+
+/*top_nav-开始*/
+.top_nav_notification {
+  height: 32px;
+  background-color: #3580d1;
+}
+
+.notification_slide {
+  color: #fff;
+  overflow: hidden;
+  width: 832px;
+  margin-left: 50px;
+  position: relative;
+  height: 32px;
+}
+
+.top_nav_notification .fa-volume-up {
+  line-height: 32px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.notification_slide ul {
+  width: 2400px;
+  position: absolute;
+  height: 32px;
+}
+
+.notification_slide li {
+  float: left;
+  width: 400px;
+  margin-right: 60px;
+}
+
+.notification_slide a {
+  color: #fff;
+  line-height: 32px;
+}
+
+
+.search_btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #fff;
+  right: 0;
+  top: 2px;
+}
+.sear_span{
+  top:0;
+  right: 5px;
+}
+
+.sear_input {
+  padding-left: 10px;
+  width: 18px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #fff;
+  right: 0;
+  top: 0;
+  display: none;
+}
+
+.fa-search {
+  color: #3580d1;
+  font-size: 18px;
+  line-height: 28px;
+  padding-left: 8px;
+}
+
+/*top_nav_notification结束*/
+.top_nav_menu {
+  height: 98px;
+  /*background-color: pink;*/
+}
+
+.logo {
+  text-indent: -9999px;
+  width: 180px;
+  height: 98px;
+  display: inline-block;
+}
+
+.logo i {
+  display: inline-block;
+  width: 138px;
+  height: 64px;
+  position: absolute;
+  background: url(../images/global_icon.png) 0 0 no-repeat;
+  top: 17px;
+  left: 0;
+}
+
+.tab_menu {
+  width: 800px;
+  position: absolute;
+  left: 180px;
+  top: 0
+}
+
+.tab_menu li {
+  float: left;
+}
+
+.tab_menu > li > a {
+  font-size: 16px;
+  position: relative;
+  padding-top: 60px;
+  margin: 0 20px;
+  color: #f00;
+  height: 38px;
+  display: inline-block;
+}
+
+.tab_menu i {
+  display: block;
+  width: 55px;
+  height: 38px;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-bottom: 10px;
+  margin-left: -27px;
+  background: url(../images/global_icon.png) no-repeat;
+}
+
+.tab_menu > li:nth-child(1) i {
+  background-position: -198px 0;
+}
+
+.tab_menu > li:nth-child(2) i {
+  background-position: -295px 0;
+}
+
+.tab_menu > li:nth-child(3) i {
+  background-position: -386px 0;
+}
+
+.tab_menu > li:nth-child(4) i {
+  background-position: -487px 0;
+}
+
+.tab_menu > li:nth-child(5) i {
+  background-position: -586px 0;
+}
+
+.tab_menu > li:nth-child(6) i {
+  background-position: -699px 0;
+}
+
+.tab_menu > li:nth-child(7) i {
+  background-position: -798px 0;
+}
+
+.tab_menu li:nth-child(1) a {
+  color: #ed3535;
+}
+
+.tab_menu li:nth-child(2) a {
+  color: #36814b;
+}
+
+.tab_menu li:nth-child(3) a {
+  color: #744fac;
+}
+
+.tab_menu li:nth-child(4) a {
+  color: #388ad6;
+}
+
+.tab_menu li:nth-child(5) a {
+  color: #00b2b4;
+}
+
+.tab_menu li:nth-child(6) a {
+  color: #f65700;
+}
+
+.tab_menu li:nth-child(7) a {
+  color: #ef2f77;
+}
+
+.tab_menu li:hover a {
+  color: #fff;
+}
+
+/*.tab_menu结束*/
+.tab_des {
+  position: absolute;
+  top: 98px;
+  background-color: skyblue;
+  height: 300px;
+  display: none;
+  z-index: 2;
+}
+
+.tab_des ul {
+  float: left;
+  padding: 0 70px 0 10px;
+  width: 100px;
+  
+}
+
+.tab_des .col3 {
+  border-left: 1px #ffffef solid;
+  border-right: 1px #ffffef solid;
+}
+
+.tab_des .col3, .tab_des .col4 {
+  width: 220px;
+  height: 180px;
+}
+
+.tab_des1, .tab_des2, .tab_des3, .tab_des4, .tab_des5 {
+  padding: 30px 0;
+}
+
+.tab_des a {
+  color: #fff;
+  line-height: 2;
+}
+
+.tab_des .col1 a {
+  line-height: 3;
+}
+.tab_des .col2{
+
+}
+.tab_des .col2 li {
+  position: relative;
+  line-height: 3;
+}
+
+.tab_des .col2 li span.pa {
+  left: 0;
+}
+
+.tab_des .col2 li a {
+  margin-left: 20px;
+}
+
+.tab_des .col1 li {
+  position: relative;
+  height: 45px;
+}
+
+.tab_des .col1 i {
+  position: absolute;
+  background: url(../images/global_icon.png) no-repeat;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  
+}
+
+.tab_des .col1 li:nth-child(1) i {
+  background-position: -599px -199px;
+}
+
+.tab_des .col1 li:nth-child(2) i {
+  background-position: -699px -199px;
+}
+
+.tab_des .col1 li:nth-child(3) i {
+  background-position: -799px -199px;
+}
+
+.tab_des .col1 span {
+  line-height: 5;
+  padding-left: 60px;
+  cursor: pointer;
+}
+
+.tab_des .col3 div:hover, .tab_des .col4 div:hover {
+  border: 2px solid #fff;
+}
+
+.tab_des .col3 div, .tab_des .col4 div {
+  width: 216px;
+  height: 120px;
+  border: 2px solid transparent;
+  overflow: hidden;
+  
+}
+
+.tab_des .col3 div img, .tab_des .col4 div img {
+  transition: all 1s;
+}
+
+.tab_des .col3 div:hover img, .tab_des .col4 div:hover img {
+  transform: scale(1.1);
+}
+
+/*top_nav-结束*/
+

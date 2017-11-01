@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>欢乐谷连锁官方网站</title>
+  <link href="style/base.css" rel="stylesheet" type="text/css"/>
+  <link href="style/index.css" rel="stylesheet" type="text/css"/>
+  <script src="scripts/jquery-1.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="index_con">
+    <div class="wrap" style="">
+      <!-- 顶部导航 -->
+      <div class="top_nav">
+        <div class="nav_border"></div>
+        <a href="" class="logopng topNavBtns" style="">
+          <img src="images/logo.png" alt=""></a>
+        <a href="" class="topNavBtns">关于欢乐谷连锁<i></i></a>
+        <a target="_blank" href="javascript:;" class="topNavBtns">华侨城集团<i></i></a>
+        <a target="_blank" href="javascript:;" class="topNavBtns">网上购票<i></i></a>
+      </div>
+      
+      <div class="index_title"></div>
+      <div class="people"></div>
+      <div class="zone_box">
+        <div class="zone_btn">
+          <a target="_blank" href="深圳欢乐谷/深圳huanlegu.html"
+             class="zoneBtns zoneBtn01"><em>深圳</em><i></i><span>欢乐谷</span></a>
+          <a target="_blank" href="北京欢乐谷/index.html"
+             class="zoneBtns zoneBtn02"><em>北京</em><i></i><span>欢乐谷</span></a>
+          <a target="_blank" href="上海欢乐谷/index.html"
+             class="zoneBtns zoneBtn03"><em>上海</em><i></i><span>欢乐谷</span></a>
+          <a target="_blank" href="成都欢乐谷/HLG.html"
+             class="zoneBtns zoneBtn04"><em>成都</em><i></i><span>欢乐谷</span></a>
+          <a target="_blank" href="武汉欢乐谷/index.html"
+             class="zoneBtns zoneBtn05"><em>武汉</em><i></i><span>欢乐谷</span></a>
+          <a target="_blank" href="天津欢乐谷/index.html"
+             class="zoneBtns zoneBtn06"><em>天津</em><i></i><span>欢乐谷</span></a>
+        </div>
+      </div>
+      
+      <div class="news_zone">
+        <div class="scrollListtitle_icon"></div>
+        <div class="scrollListtitle">新闻动态：</div>
+        <div class="Notice_scroll_con" id="NotoceScrollCon">
+          <div class="Notice_scrollList" id="news"><a href="javascript;;">• 2017/05/10关于园内交通工具限时优惠的通知&nbsp;&nbsp;来源：深圳欢乐谷</a>
+            <a href="javascript:;">• 2017/05/16中国旅游日，上海欢乐</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <img src="images/bot_logo.png" alt="">
+        <div class="copyright_text">
+          <p>Copyright ©2002._2016. ALL RIGHTS RESERVED. </p>
+          <p>深圳华侨城股份有限公司版权所有 <a target="_blank" href="javascript:;">粤icp备08102613号</a>
+            <a target="_blank" href="javascript:;">【互动力 承建 运营】</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="effect">
+      <div class="wrap">
+        <div class="effect_01"></div>
+        <div class="effect_02"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  NoticeScroll();
+  setTimeout(function () {
+    var i = 0;
+    var total = $('.zoneBtns').length;
+    function addClassDelay() {
+      if (i >= total) {
+        return false;
+      }
+      $('.zoneBtns').eq(i).addClass('active');
+      i++;
+      setTimeout(function () {
+        addClassDelay();
+      }, 200);
+    }
+    addClassDelay();
+  }, 100)
+  
+  function NoticeScroll() {
+    var News = document.getElementById("news");
+    News.innerHTML = News.innerHTML + News.innerHTML;
+    console.log(News.offsetWidth);
+    var timer = null;
+    timer = setInterval(Move, 30)
+    News.onmouseover = function () {
+      clearInterval(timer);
+    }
+    News.onmouseout = function () {
+      timer = setInterval(Move, 30);
+    }
+    function Move() {
+      if (News.offsetLeft <= -News.offsetWidth / 2) {
+        News.style.left = 0;
+      }
+      News.style.left = News.offsetLeft - 3 + 'px';
+    }
+  }
+ 
+  
+  var oPic01 = $(".effect_01");
+  var oPic02 = $(".effect_02");
+  var oPic03 = $(".people");
+  var x = 0;
+  var y = 0;
+  var x1 = 0;
+  var y1 = 0;
+  var x2 = 0;
+  var y2 = 0;
+  var x3 = 0;
+  
+  $("html,body").mousemove(function (ev) {
+    ev = ev || window.event;
+    x = ev.pageX || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
+    y = ev.pageY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    x1 = -x / 10;
+    y1 = -y / 2 ;
+    x2 = x / -20 + 80;
+    y2 = -y / -30 + 40;
+    x3 = -x / 20;
+    oPic01.css({"transform": "translate3d(" + x1 + "px," + y1 + "px,0px)"});
+    oPic02.css({"transform": "translate3d(" + x2 + "px," + "-" + y2 + "px,0px)"});
+    oPic03.css({"transform": "translate3d(" + x3 + "px,0px,0px)"});
+  });
+
+</script>
+</body>
+</html>

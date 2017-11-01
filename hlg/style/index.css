@@ -1,0 +1,384 @@
+.top_nav {
+  width: 100%;
+  height: 68px;
+  /*background: url(../images/btn_bg.jpg) 0px 0px repeat-x;*/
+  border-radius: 0px 0px 5px 5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.nav_border {
+  width: 100%;
+  height: 2px;
+  background: url("../images/nav_border.jpg") 0px 0px repeat-x;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.topNavBtns {
+  float: left;
+  width: 249px;
+  height: 68px;
+  text-align: center;
+  line-height: 68px;
+  color: #2a2a2a;
+  font-size: 18px;
+  position: relative;
+  transition: 0.3s;
+  border-left: 1px solid #e7e7e7;
+  margin-left: -1px;
+}
+
+.topNavBtns i {
+  display: block;
+  width: 100%;
+  height: 0px;
+  background: #ff611c;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  transition: 0.3s;
+}
+
+.topNavBtns:hover.topNavBtns {
+  background: #fff;
+}
+
+.topNavBtns:hover.topNavBtns i {
+  height: 3px;
+}
+
+.topNavBtns img {
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.topNavBtns:hover img {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+.container {
+  min-width: 1000px;
+  min-height: 500px;
+  margin: 0px auto;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+}
+
+.index_con {
+  width: 100%;
+  height: 1045px;
+  background: url("../images/bg.jpg") center top no-repeat;
+  position: relative;
+}
+
+.index_title {
+  width: 589px;
+  height: 185px;
+  background: url("../images/index_title.png") 0px 0px no-repeat;
+  position: absolute;
+  left: 200px;
+  top: 80px;
+}
+
+.people {
+  width: 522px;
+  height: 345px;
+  background: url("../images/people.png") 0px 0px no-repeat;
+  position: absolute;
+  left: 250px;
+  top: 350px;
+  transition: all 1s linear;
+}
+
+.top_nav {
+  width: 100%;
+  height: 68px;
+  /*background: url(../images/btn_bg.jpg) 0px 0px repeat-x;*/
+  border-radius: 0 0 5px 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav_border {
+  width: 100%;
+  height: 2px;
+  background: url("../images/nav_border.jpg") 0px 0px repeat-x;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.topNavBtns {
+  float: left;
+  width: 249px;
+  height: 68px;
+  text-align: center;
+  line-height: 68px;
+  color: #2a2a2a;
+  font-size: 18px;
+  position: relative;
+  transition: 0.3s;
+  border-left: 1px solid #e7e7e7;
+}
+.topNavBtns i {
+  display: block;
+  width: 100%;
+  height: 0px;
+  background: #ff611c;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  transition: 0.3s;
+}
+
+.topNavBtns:hover.topNavBtns {
+  background: #fff;
+}
+
+.topNavBtns:hover.topNavBtns i {
+  height: 3px;
+}
+
+.topNavBtns img {
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.topNavBtns:hover img {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+.zone_box {
+  width: 1050px;
+  position: absolute;
+  left: 0px;
+  top: 590px;
+}
+
+.zoneBtns {
+  display: block;
+  float: left;
+  width: 164px;
+  height: 205px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+  border-radius: 5px;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.zoneBtns:hover {
+  /*background: red;*/
+  box-shadow: 1px 1px 30px #111;
+}
+
+.zoneBtns.active {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  opacity: 1;
+  
+}
+
+.zoneBtns em {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  font-size: 32px;
+  margin-top: 30px;
+  transition: 0.5s;
+}
+
+.zoneBtns i {
+  display: inline-block;
+  cursor: pointer;
+  width: 43px;
+  height: 43px;
+  background: url("../images/in.png") 0px 0px no-repeat;
+  display: none;
+}
+
+.zoneBtns span {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  font-size: 24px;
+  transition: 0.5s;
+  position: absolute;
+  top: 80px;
+  left: 0px;
+}
+
+.zoneBtn01 {
+  background: url("../images/zone_bg.png") 0px 0px no-repeat;
+  transition: all 1s ease;
+}
+
+.zoneBtn02 {
+  background: url("../images/zone_bg.png") -171px 0px no-repeat;
+  transition: all 1s ease;
+}
+
+.zoneBtn03 {
+  background: url("../images/zone_bg.png") -342px 0px no-repeat;
+  transition: all 1s ease;
+}
+
+.zoneBtn04 {
+  background: url("../images/zone_bg.png") -512px 0px no-repeat;
+  transition: all 1s ease;
+}
+
+.zoneBtn05 {
+  background: url("../images/zone_bg.png") -683px 0px no-repeat;
+  transition: all 1s ease;
+}
+
+.zoneBtn06 {
+  background: url("../images/zone_bg.png") -854px 0px no-repeat;
+  transition: all 1s ease;
+}
+
+.zoneBtns:hover.zoneBtns em {
+  margin-top: 25px;
+}
+
+.zoneBtns:hover.zoneBtns i {
+  display: inline-block;
+  margin-top: 10px;
+  animation: bounceInUp .8s ease both;
+}
+
+.zoneBtns:hover.zoneBtns span {
+  top: 130px;
+}
+
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.news_zone {
+  width: 1015px;
+  height: 75px;
+  background: url("../images/fade80.png");
+  border-radius: 5px;
+  position: absolute;
+  left: 0px;
+  top: 820px;
+}
+
+.Notice_scroll_con {
+  position: relative;
+  overflow: hidden;
+  width: 1000px;
+  height: 24px;
+  margin-top: 25px;
+  *top: 25px;
+  margin-left: 160px;
+  font-size: 16px;
+}
+
+.scrollListtitle {
+  position: absolute;
+  left: 50px;
+  top: 22px;
+  color: #ffea00;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.scrollListtitle_icon {
+  display: block;
+  width: 19px;
+  height: 19px;
+  background: url("../images/icon01.png") 0px 0px no-repeat;
+  position: absolute;
+  left: 20px;
+  top: 28px;
+}
+.Notice_scrollList {
+  position: absolute;
+  left:0px;
+  top:0;
+  float: left;
+  /*margin-left: 5px;*/
+}
+.Notice_scrollList a {
+  color: white;
+}
+.copyright {
+  width: 1000px;
+  position: absolute;
+  left: 0px;
+  top: 930px;
+  text-align: center;
+}
+
+.copyright_text {
+  width: 480px;
+  display: inline-block;
+}
+
+.copyright_text p {
+  color: #535353;
+  margin-bottom: 10px;
+}
+
+.copyright_text p a {
+  color: #535353;
+  transition: 0.3s;
+}
+
+.copyright_text p a:hover {
+  color: #4CAF50;
+}
+
+.effect_01 {
+  width: 1650px;
+  height: 745px;
+  background: url("../images/pic01.png") 0px 0px no-repeat;
+  position: absolute;
+  left: -250px;
+  top: 0px;
+  transition: all 1s linear;
+}
+
+.effect_02 {
+  width: 1332px;
+  height: 89px;
+  background: url("../images/pic02.png") 0px 0px no-repeat;
+  position: absolute;
+  left: -200px;
+  top: 100px;
+  transition: all 1s linear;
+}
+
